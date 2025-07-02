@@ -2,14 +2,12 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-      /*  System.out.println("Saludar!");
+        System.out.println("1. Saludar!");
 
         System.out.println("1.1");
         saludoNombreSinParam();  //1.1
-*/
         Scanner sc = new Scanner (System.in);
 
-/*
 
         System.out.println("1.2");
         System.out.println("Saludo:");
@@ -21,14 +19,13 @@ public class Main {
 
 
         //saludoNombreSinParam();
-        System.out.println("1.2");
+        //System.out.println("1.2");
         saludoNombre(greeting, name);  //1.2
 
         //1.3
         System.out.println("1.3");
         String resultadoReturn = saludoNombreConParametrosYReturn(greeting, name);
-        System.out.println("Resultado return: " + resultadoReturn);
-*/
+        System.out.println("Método saluda con return: " + resultadoReturn);
 
 
         System.out.println("2.  Calcular ");
