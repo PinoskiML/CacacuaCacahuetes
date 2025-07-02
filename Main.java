@@ -126,7 +126,6 @@ public class Main {
 
     //1.2
     private static void saludoNombreSinParam() {
-        Scanner sc = new Scanner (System.in);
 
         System.out.println("Saludo:");
         String greeting = sc.nextLine();
@@ -144,7 +143,7 @@ public class Main {
 
 //1.3
     private static String saludoNombreConParametrosYReturn(String greeting, String name) {
-        String saludoNombre = (greeting + " " + name + "1.3");
+        String saludoNombre = (greeting + " " + name );
         return saludoNombre;
     }
 
@@ -206,8 +205,12 @@ public class Main {
             System.out.print("Segundo numero: ");
             double numB = Double.parseDouble(sc.nextLine());
 
-            double result = numA / numB;
-            System.out.println("El resultado es :" +result);
+            if (numB == 0){
+                System.out.println("No se puede dividir entre 0");
+            }else {
+                double result = numA / numB;
+                System.out.println("El resultado es :" + result);
+            }
         } catch (NumberFormatException numberFormatException){
             System.out.println("La entrada debe de ser dígitos: ");
         }
