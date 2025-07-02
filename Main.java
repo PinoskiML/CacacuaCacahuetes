@@ -1,14 +1,14 @@
 import java.util.Scanner;
 
 public class Main {
-    private static Scanner sc = new Scanner (System.in);
+    private static Scanner sc = new Scanner(System.in);
+
     public static void main(String[] args) {
 
         System.out.println("1. Saludar!");
 
         System.out.println("1.1");
         saludoNombreSinParam();  //1.1
-
 
 
         System.out.println("1.2");
@@ -32,12 +32,12 @@ public class Main {
 
         System.out.println("2.  Calcular ");
 
-        String salir ="";
+        String salir = "";
         do {
             mathSwitch();
             System.out.print("'S' para salir, cualquier otra tecla para continuar: ");
             salir = sc.nextLine();
-        }  while (!salir.equalsIgnoreCase("S"));
+        } while (!salir.equalsIgnoreCase("S"));
 
         //3
         System.out.println("3. ");
@@ -69,10 +69,9 @@ public class Main {
     }
 
     private static void mathSwitch() {
-        Scanner sc = new Scanner (System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.println(" \n 1: Sumar \n 2: Restar \n 3: Multiplicar \n 4: Dividir ");
-   /*     int option;   DEPRECATED this is for numerical only
-
+   /*     int option;   DEPRECATED solo para numeros
         try {
             option = Integer.parseInt(sc.nextLine());
         } catch (NumberFormatException numberFormatException){
@@ -82,7 +81,7 @@ public class Main {
         String option = sc.nextLine();
 
 
-        switch (option){
+        switch (option) {
             case "1":
             case "+":  //sumar
 
@@ -118,7 +117,7 @@ public class Main {
                 break;
 
             default:
-                System.out.println("Number must be between 1 and 4");
+                System.out.println("El número debe de ser entre 1 y 4");
         }
 
 
@@ -136,37 +135,37 @@ public class Main {
         System.out.println(greeting + " " + name);
     }
 
-//1.2
+    //1.2
     private static void saludoNombre(String saludo, String name) {
         System.out.println(saludo + " " + name);
     }
 
-//1.3
+    //1.3
     private static String saludoNombreConParametrosYReturn(String greeting, String name) {
-        String saludoNombre = (greeting + " " + name );
+        String saludoNombre = (greeting + " " + name);
         return saludoNombre;
     }
 
 
     // 3
     //  suamr
-    private static void sumar(){
+    private static void sumar() {
         try {
 
-            System.out.print("Primer numero: " );
+            System.out.print("Primer numero: ");
             double numA = Double.parseDouble(sc.nextLine());
             System.out.print("Segundo numero: ");
             double numB = Double.parseDouble(sc.nextLine());
 
             double result = numA + numB;
-            System.out.println("El resultado es: " +result);
-        } catch (NumberFormatException numberFormatException){
+            System.out.println("El resultado es: " + result);
+        } catch (NumberFormatException numberFormatException) {
             System.out.println("La entrada debe de ser dígitos: ");
         }
 
     }
 
-    private static void restar(){
+    private static void restar() {
         try {
 
             System.out.print("Primer numero: ");
@@ -175,13 +174,13 @@ public class Main {
             double numB = Double.parseDouble(sc.nextLine());
 
             double result = numA - numB;
-            System.out.println("El resultado es :" +result);
-        } catch (NumberFormatException numberFormatException){
+            System.out.println("El resultado es :" + result);
+        } catch (NumberFormatException numberFormatException) {
             System.out.println("La entrada debe de ser dígitos: ");
         }
     }
 
-    private static void multiplicar(){
+    private static void multiplicar() {
         try {
 
             System.out.print("Primer numero: ");
@@ -190,14 +189,14 @@ public class Main {
             double numB = Double.parseDouble(sc.nextLine());
 
             double result = numA * numB;
-            System.out.println("El resultado es :" +result);
-        } catch (NumberFormatException numberFormatException){
+            System.out.println("El resultado es :" + result);
+        } catch (NumberFormatException numberFormatException) {
             System.out.println("La entrada debe de ser dígitos: ");
         }
 
     }
 
-    private static void dividir(){
+    private static void dividir() {
         try {
 
             System.out.print("Primer numero: ");
@@ -205,13 +204,13 @@ public class Main {
             System.out.print("Segundo numero: ");
             double numB = Double.parseDouble(sc.nextLine());
 
-            if (numB == 0){
+            if (numB == 0) {
                 System.out.println("No se puede dividir entre 0");
-            }else {
+            } else {
                 double result = numA / numB;
                 System.out.println("El resultado es :" + result);
             }
-        } catch (NumberFormatException numberFormatException){
+        } catch (NumberFormatException numberFormatException) {
             System.out.println("La entrada debe de ser dígitos: ");
         }
     }
