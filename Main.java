@@ -41,15 +41,32 @@ public class Main {
         }  while (!salir.equalsIgnoreCase("S"));
 
         //3
-        System.out.println("CACATUA CACAHUETE");
+        System.out.println("3. ");
 
 
+        String comida = "";
+
+        do {
+            pideComida();
+            System.out.print("Cual es la comida??");
+            comida = sc.nextLine();
+        } while (!comida.equalsIgnoreCase("cacahuete"));
+
+        dormirse();
 
 
-        System.out.println("Laterz");
+        //System.out.println("Laterz");
         sc.close();
 
         //end of main
+    }
+
+    private static void dormirse() {
+        System.out.println("zzZZzzzzzZzzz....");
+    }
+
+    private static void pideComida() {
+        System.out.println("CACATUA CACAHUETE!!");
     }
 
     private static void mathSwitch() {
