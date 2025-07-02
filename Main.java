@@ -2,13 +2,14 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Saludar!");
+      /*  System.out.println("Saludar!");
 
         System.out.println("1.1");
         saludoNombreSinParam();  //1.1
-
+*/
         Scanner sc = new Scanner (System.in);
 
+/*
 
         System.out.println("1.2");
         System.out.println("Saludo:");
@@ -27,14 +28,115 @@ public class Main {
         System.out.println("1.3");
         String resultadoReturn = saludoNombreConParametrosYReturn(greeting, name);
         System.out.println("Resultado return: " + resultadoReturn);
+*/
+
+
+        System.out.println("2.  Calcular ");
+
+        String salir ="";
+        do {
+            mathSwitch();
+            System.out.print("'S' para salir, cualquier otra tecla para continuar: ");
+            salir = sc.nextLine();
+        }  while (!salir.equalsIgnoreCase("S"));
+
+        //3
+        System.out.println("CACATUA CACAHUETE");
 
 
 
+
+        System.out.println("Laterz");
+        sc.close();
 
         //end of main
     }
 
-//1.2
+    private static void mathSwitch() {
+        Scanner sc = new Scanner (System.in);
+        System.out.println(" \n 1: Sumar \n 2: Restar \n 3: Multiplicar \n 4: Dividir ");
+   /*     int option;   DEPRECATED this is for numerical only
+
+        try {
+            option = Integer.parseInt(sc.nextLine());
+        } catch (NumberFormatException numberFormatException){
+            option = 5;   //triggers default
+        }*/
+
+        String option = sc.nextLine();
+
+
+        switch (option){
+            case "1":
+            case "+":  //sumar
+                try {
+
+                    System.out.print("Primer numero: " );
+                    double numA = Double.parseDouble(sc.nextLine());
+                    System.out.print("Segundo numero: ");
+                    double numB = Double.parseDouble(sc.nextLine());
+
+                    double result = numA + numB;
+                    System.out.println("El resultado es: " +result);
+                } catch (NumberFormatException numberFormatException){
+                    System.out.println("La entrada debe de ser dígitos: ");
+                }break;
+
+            case "2":  //Restar
+            case "-":
+                try {
+
+                    System.out.print("Primer numero: ");
+                    double numA = Double.parseDouble(sc.nextLine());
+                    System.out.print("Segundo numero: ");
+                    double numB = Double.parseDouble(sc.nextLine());
+
+                    double result = numA - numB;
+                    System.out.println("El resultado es :" +result);
+                } catch (NumberFormatException numberFormatException){
+                    System.out.println("La entrada debe de ser dígitos: ");
+                }break;
+
+
+            case "3":
+            case "*":    //Multiplicar
+                try {
+
+                    System.out.print("Primer numero: ");
+                    double numA = Double.parseDouble(sc.nextLine());
+                    System.out.print("Segundo numero: ");
+                    double numB = Double.parseDouble(sc.nextLine());
+
+                    double result = numA * numB;
+                    System.out.println("El resultado es :" +result);
+                } catch (NumberFormatException numberFormatException){
+                    System.out.println("La entrada debe de ser dígitos: ");
+                }break;
+
+
+            case "4":  // dividir
+            case "/":
+                try {
+
+                    System.out.print("Primer numero: ");
+                    double numA = Double.parseDouble(sc.nextLine());
+                    System.out.print("Segundo numero: ");
+                    double numB = Double.parseDouble(sc.nextLine());
+
+                    double result = numA / numB;
+                    System.out.println("El resultado es :" +result);
+                } catch (NumberFormatException numberFormatException){
+                    System.out.println("La entrada debe de ser dígitos: ");
+                }break;
+
+            default:
+                System.out.println("Number must be between 1 and 4");
+        }
+
+
+    }
+
+    //1.2
     private static void saludoNombreSinParam() {
         Scanner sc = new Scanner (System.in);
 
@@ -57,5 +159,9 @@ public class Main {
         String saludoNombre = (greeting + " " + name + "1.3");
         return saludoNombre;
     }
+
+
+
+
 
 }
